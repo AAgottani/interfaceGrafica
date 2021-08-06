@@ -6,11 +6,14 @@
 package view;
 
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
 
 /**
  *
  * @author PC
  */
+
+
 public class TelaCadastroMoveis extends javax.swing.JInternalFrame {
 
     /**
@@ -40,14 +43,24 @@ public class TelaCadastroMoveis extends javax.swing.JInternalFrame {
         tamanhoEnvioCadastro = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        qtdMaterialCadastro1 = new javax.swing.JTextField();
+        qtdCad1 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        materialCad = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        plataformaCadastro1 = new javax.swing.JTextField();
-        botaoAdicionaPlataforma = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        plataformaCad1 = new javax.swing.JTextField();
         salvarcadMov = new javax.swing.JButton();
+        precoCad2 = new javax.swing.JTextField();
+        plataformaCad2 = new javax.swing.JTextField();
+        precoCad3 = new javax.swing.JTextField();
+        plataformaCad3 = new javax.swing.JTextField();
+        qtdCad2 = new javax.swing.JTextField();
+        materialCad2 = new javax.swing.JTextField();
+        qtdCad3 = new javax.swing.JTextField();
+        materialCad3 = new javax.swing.JTextField();
+        qtdCad4 = new javax.swing.JTextField();
+        materialCad4 = new javax.swing.JTextField();
+        qtdCad5 = new javax.swing.JTextField();
+        materialCad5 = new javax.swing.JTextField();
 
         jTextField3.setText("jTextField3");
 
@@ -67,9 +80,9 @@ public class TelaCadastroMoveis extends javax.swing.JInternalFrame {
 
         jLabel5.setText("Material");
 
-        qtdMaterialCadastro1.addActionListener(new java.awt.event.ActionListener() {
+        qtdCad1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                qtdMaterialCadastro1ActionPerformed(evt);
+                qtdCad1ActionPerformed(evt);
             }
         });
 
@@ -77,14 +90,16 @@ public class TelaCadastroMoveis extends javax.swing.JInternalFrame {
 
         jLabel7.setText("Plataforma");
 
-        botaoAdicionaPlataforma.setText("Adicionar outra");
-
-        jButton1.setText("Adiciona Outro");
-
         salvarcadMov.setText("Salvar");
         salvarcadMov.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salvarcadMovActionPerformed(evt);
+            }
+        });
+
+        precoCad3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                precoCad3ActionPerformed(evt);
             }
         });
 
@@ -95,40 +110,58 @@ public class TelaCadastroMoveis extends javax.swing.JInternalFrame {
             .addGroup(jPanelCadastroMoveis1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(NomeMovelCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelCadastroMoveis1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(65, 65, 65)
-                        .addComponent(jLabel7))
-                    .addGroup(jPanelCadastroMoveis1Layout.createSequentialGroup()
-                        .addComponent(campoPrecoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(plataformaCadastro1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(botaoAdicionaPlataforma))
-                    .addGroup(jPanelCadastroMoveis1Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanelCadastroMoveis1Layout.createSequentialGroup()
-                            .addComponent(tamanhoEnvioCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(campoPesoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelCadastroMoveis1Layout.createSequentialGroup()
-                            .addComponent(qtdMaterialCadastro1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(27, 27, 27)
-                            .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCadastroMoveis1Layout.createSequentialGroup()
+                        .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(qtdCad1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)
+                            .addComponent(qtdCad5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelCadastroMoveis1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(materialCad5, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+                                    .addComponent(materialCad, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(materialCad2, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(materialCad3)
+                                    .addComponent(materialCad4))
+                                .addGap(0, 271, Short.MAX_VALUE))
+                            .addGroup(jPanelCadastroMoveis1Layout.createSequentialGroup()
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(salvarcadMov)
-                                .addComponent(jButton1))))
+                                .addGap(142, 142, 142))))
                     .addGroup(jPanelCadastroMoveis1Layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(141, 141, 141)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 136, Short.MAX_VALUE))
+                        .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(qtdCad2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                                .addComponent(qtdCad3))
+                            .addComponent(jLabel1)
+                            .addComponent(NomeMovelCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelCadastroMoveis1Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(65, 65, 65)
+                                .addComponent(jLabel7))
+                            .addGroup(jPanelCadastroMoveis1Layout.createSequentialGroup()
+                                .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(precoCad3, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(precoCad2, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(campoPrecoCadastro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(plataformaCad1, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                                    .addComponent(plataformaCad2)
+                                    .addComponent(plataformaCad3)))
+                            .addComponent(qtdCad4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelCadastroMoveis1Layout.createSequentialGroup()
+                                .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tamanhoEnvioCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(27, 27, 27)
+                                .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(campoPesoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 261, Short.MAX_VALUE))))
         );
         jPanelCadastroMoveis1Layout.setVerticalGroup(
             jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,31 +174,52 @@ public class TelaCadastroMoveis extends javax.swing.JInternalFrame {
                 .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel7))
-                .addGap(11, 11, 11)
+                .addGap(12, 12, 12)
                 .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(campoPrecoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(plataformaCadastro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoAdicionaPlataforma))
-                .addGap(17, 17, 17)
+                    .addComponent(plataformaCad1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(precoCad2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(plataformaCad2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(precoCad3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(plataformaCad3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
                 .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tamanhoEnvioCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoPesoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel5))
+                    .addComponent(jLabel5)
+                    .addComponent(salvarcadMov))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(materialCad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(qtdCad1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(qtdMaterialCadastro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addComponent(salvarcadMov)
-                .addGap(20, 20, 20))
+                    .addComponent(qtdCad2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(materialCad2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(qtdCad3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(materialCad3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(qtdCad4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(materialCad4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelCadastroMoveis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(materialCad5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(qtdCad5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -176,36 +230,74 @@ public class TelaCadastroMoveis extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelCadastroMoveis1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanelCadastroMoveis1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void qtdMaterialCadastro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qtdMaterialCadastro1ActionPerformed
+    private void precoCad3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precoCad3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_qtdMaterialCadastro1ActionPerformed
-
-    private void tamanhoEnvioCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tamanhoEnvioCadastroActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_tamanhoEnvioCadastroActionPerformed
+    }//GEN-LAST:event_precoCad3ActionPerformed
 
     private void salvarcadMovActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarcadMovActionPerformed
         // TODO add your handling code here:
         variaveisCadastro();
     }//GEN-LAST:event_salvarcadMovActionPerformed
-    public void variaveisCadastro(){
+
+    private void qtdCad1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qtdCad1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_qtdCad1ActionPerformed
+
+    private void tamanhoEnvioCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tamanhoEnvioCadastroActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_tamanhoEnvioCadastroActionPerformed
+
+    
+    ArrayList<String> plataforma= new ArrayList <String>();
+    
+    
+        public String variaveisCadastro(){
         String nomeMovelCad= NomeMovelCadastro.getText();
+        String pesoCadMovel= campoPesoCadastro.getText();
+        String precoCadMovel= campoPrecoCadastro.getText();
+        String plataformaCad1= this.plataformaCad1.getText();
+        String plataformaCad2= this.plataformaCad2.getText();
+        String plataformaCad3= this.plataformaCad3.getText();
+        String tamanhoCad= tamanhoEnvioCadastro.getText();
+        String qtdMaterialCad= qtdCad1.getText();
+        String materialCad= this.materialCad.getText();
+        String materialCad2= this.materialCad2.getText();
+        String materialCad3= this.materialCad3.getText();
+        String materialCad4= this.materialCad4.getText();
+        String materialCad5= this.materialCad5.getText();
+        String qtdCad2= this.qtdCad2.getText();
+        String qtdCad3= this.qtdCad3.getText();
+        String qtdCad4= this.qtdCad4.getText();
+        String qtdCad5= this.qtdCad5.getText();
+        
+        String info= ("Móvel"+ nomeMovelCad +"\n"+
+                "Preço na plataforma \n"+ plataformaCad1 + precoCadMovel 
+                
+                
+                
+                                                    );
+        
+        
+        
         JOptionPane.showMessageDialog(null, nomeMovelCad);
+        return info;
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField NomeMovelCadastro;
-    private javax.swing.JButton botaoAdicionaPlataforma;
     private javax.swing.JTextField campoPesoCadastro;
     private javax.swing.JTextField campoPrecoCadastro;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -214,10 +306,22 @@ public class TelaCadastroMoveis extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     javax.swing.JPanel jPanelCadastroMoveis1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField plataformaCadastro1;
-    private javax.swing.JTextField qtdMaterialCadastro1;
+    private javax.swing.JTextField materialCad;
+    private javax.swing.JTextField materialCad2;
+    private javax.swing.JTextField materialCad3;
+    private javax.swing.JTextField materialCad4;
+    private javax.swing.JTextField materialCad5;
+    private javax.swing.JTextField plataformaCad1;
+    private javax.swing.JTextField plataformaCad2;
+    private javax.swing.JTextField plataformaCad3;
+    private javax.swing.JTextField precoCad2;
+    private javax.swing.JTextField precoCad3;
+    private javax.swing.JTextField qtdCad1;
+    private javax.swing.JTextField qtdCad2;
+    private javax.swing.JTextField qtdCad3;
+    private javax.swing.JTextField qtdCad4;
+    private javax.swing.JTextField qtdCad5;
     private javax.swing.JButton salvarcadMov;
     private javax.swing.JTextField tamanhoEnvioCadastro;
     // End of variables declaration//GEN-END:variables
